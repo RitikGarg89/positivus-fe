@@ -21,10 +21,13 @@
   --spacing-large: 16px;
   --spacing-x-large: 32px;
   --spacing-xx-large: 64px;
+  --spacing-xxx-large: 128px;
 
   --button-border-radius: 16px;
 }
 
+
+/* ------BODY PROPERTY AND MAIN CONSTRAINS------- */
 body {
   font-family: "Space Grotesk", sans-serif;
   background-color: var(--white-color);
@@ -61,6 +64,8 @@ h4 {
   padding: var(--spacing-x-large) var(--spacing-xx-large);
 }
 
+/* ------NAVIGATION BAR------- */
+
 .header {
   display: flex;
   align-items: center;
@@ -81,6 +86,7 @@ h4 {
 
 .button {
   height: 68px;
+  width: fit-content;
   padding: 0 var(--spacing-x-large);
   display: inline-flex;
   align-items: center;
@@ -90,13 +96,288 @@ h4 {
   line-height: 1.4;
 }
 
-.button--primary {
-}
+/* .button--primary {
+}*/
 
 .button--secondary {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
 }
 
 .button--outline {
   background-color: transparent;
   border: 1px solid var(--secondary-color);
+}
+
+/* --------HERO SECTION--------- */
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 70px;
+  margin: var(--spacing-xx-large) 0px;
+}
+
+.hero__content {
+  display: flex;
+  height: 100%;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--spacing-x-large);
+  justify-content: space-between;
+}
+
+.hero__title {
+  width: 531px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--secondary-color);
+  line-height: 1.4;
+}
+
+.hero__description {
+  width: 490px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: var(--font-size-medium);
+  color: var(--secondary-color);
+  line-height: 1.4;
+}
+
+/* ------LOGOTYPES------ */
+.logotypes {
+  display: flex;
+  justify-content: space-between;
+  margin: var(--spacing-x-large) 0px;
+  /* padding: 0px 100px 0px 100px; */
+}
+
+/* ------Section Headings------- */
+.section--heading {
+  display: flex;
+  margin: var(--spacing-xx-large) 0px;
+  /* margin-top: var(--spacing-xxx-large); */
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spacing-xx-large);
+}
+
+.section--title {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: var(--spacing-medium);
+  margin: 0;
+  border-radius: 7px;
+}
+
+.section--description {
+  color: var(--secondary-color);
+  width: 580px;
+}
+
+/* ---------SERVICES BASE CARD-------- */
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-x-large);
+  margin: var(--spacing-xx-large) 0px;
+}
+
+.services__card {
+  height: 310px;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  border-radius: 50px;
+  border: 1px solid var(--secondary-color);
+  box-shadow: 0 5px 0 var(--secondary-color);
+  /* background: var(--grey-color); */
+}
+
+.services__content {
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.services__title {
+  display: flex;
+  flex-direction: column;
+}
+
+.services__title-line {
+  width: fit-content;
+  padding: 0px 7px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  border-radius: 7px;
+}
+
+.services__learn-more {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.services__text {
+  font-size: var(--font-size-medium);
+}
+
+.services__img {
+  width: 50%;
+}
+
+/* ------SERVICES FEATURES CARD--------- */
+
+.service--green-card {
+  background-color: var(--primary-color);
+}
+
+.service--green-card .services__title-line {
+  background-color: var(--white-color);
+  color: var(--secondary-color);
+}
+
+.service--grey-card {
+  background-color: var(--grey-color);
+}
+
+.service--grey-card .services__title-line {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.service--black-card {
+  background-color: var(--secondary-color);
+}
+
+.service--black-card .services__title-line {
+  background-color: var(--white-color);
+  color: var(--secondary-color);
+}
+
+.service--black-card .services__text {
+  color: var(--white-color);
+}
+
+
+/* --------CTA SECTION--------- */
+.cta {
+  margin: var(--spacing-xx-large) 0px;
+  padding: var(--spacing-xx-large) 0px;
+}
+
+.cta__card {
+  width: 100%;
+  height: 347px;
+  background-color: var(--grey-color);
+  border-radius: 45px;
+  padding: var(--spacing-xx-large);
+  display: flex;
+  gap: 225px;
+}
+
+.cta__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-x-large);
+}
+
+.cta__title {
+  margin: 0px;
+}
+
+.cta__text {
+  margin: 0px;
+}
+
+.cta__illustration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------CASE STUDIES-------------- */
+.case-studies {
+  background-color: var(--secondary-color);
+  border-radius: 45px;
+  padding: var(--spacing-xx-large);
+  display: flex;
+  gap: var(--spacing-xx-large);
+  margin: var(--spacing-xx-large) 0px;
+}
+
+.case-studies__card {
+  display: flex;
+  width: 286px;
+  flex-direction: column;
+
+}
+
+.case-studies__description {
+  color: var(--white-color);
+  margin: 0px;
+}
+
+.case-studies__learn-more {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.case-studies__learn-more-text {
+  color: var(--primary-color);
+}
+
+/* ----------GUIDANCE SECTION--------------- */
+.guidance {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-x-large);
+}
+
+.guid__card {
+  padding: 41px 60px;
+  background-color: var(--grey-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: 45px;
+  box-shadow: 0px 5px 0px 0px var(--secondary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.guid__label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--font-size-x-large);
+}
+
+.guid__number {
+  font-size: var(--font-size-xx-large);
+  font-weight: 500;
+}
+
+.guid__title {
+  font-size: var(--font-size-large);
+  font-weight: 500;
+}
+
+/* -------------TEAM SECTION------------- */
+.team {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 371px);
+  gap: 40px;
+}
+
+.team__card {
+  background-color: transparent;
+  border-radius: 45px;
+  border: 1px solid var(--secondary-color);
+  box-shadow: 0 5px 0 var(--secondary-color);
 }
