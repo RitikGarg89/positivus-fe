@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  --primary-color: #b9ff66;
+  --secondary-color: #191a23;
+  --grey-color: #f3f3f3;
+  --white-color: #ffffff;
+
+  /* font sizes */
+  --font-size-regular: 18px;
+  --font-size-medium: 20px;
+  --font-size-large: 30px;
+  --font-size-x-large: 40px;
+  --font-size-xx-large: 60px;
+
+  --spacing-small: 4px;
+  --spacing-medium: 8px;
+  --spacing-large: 16px;
+  --spacing-x-large: 32px;
+  --spacing-xx-large: 64px;
+
+  --button-border-radius: 16px;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: var(--white-color);
+}
+
+p {
+  font-size: var(--font-size-regular);
+  font-weight: 400;
+}
+
+h1 {
+  font-size: var(--font-size-xx-large);
+  font-weight: 500;
+}
+
+h2 {
+  font-size: var(--font-size-x-large);
+  font-weight: 500;
+}
+
+h3 {
+  font-size: var(--font-size-large);
+  font-weight: 500;
+}
+
+h4 {
+  font-size: var(--font-size-medium);
+  font-weight: 500;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: var(--spacing-x-large) var(--spacing-xx-large);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  gap: var(--spacing-x-large);
+  align-items: center;
+}
+
+.nav__link {
+  font-size: var(--font-size-medium);
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.button {
+  height: 68px;
+  padding: 0 var(--spacing-x-large);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--button-border-radius);
+  font-size: var(--font-size-medium);
+  line-height: 1.4;
+}
+
+.button--primary {
+}
+
+.button--secondary {
+}
+
+.button--outline {
+  background-color: transparent;
+  border: 1px solid var(--secondary-color);
+}
