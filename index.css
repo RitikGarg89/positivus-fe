@@ -341,6 +341,7 @@ h4 {
   gap: var(--spacing-x-large);
 }
 
+
 .guid__card {
   padding: 41px 60px;
   background-color: var(--grey-color);
@@ -348,7 +349,24 @@ h4 {
   border-radius: 45px;
   box-shadow: 0px 5px 0px 0px var(--secondary-color);
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  transition: gap .5s ease;
+  /* gap: 30px; */
+}
+
+.guid__card:hover {
+  gap: 30px;
+  background-color: var(--primary-color);
+}
+
+.guid__header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* gap: 50px; */
   align-items: center;
 }
 
@@ -367,6 +385,40 @@ h4 {
 .guid__title {
   font-size: var(--font-size-large);
   font-weight: 500;
+}
+
+.guid__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.guid__divider {
+  width: 100%;
+  height: 1px;
+  background: #191A23;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s ease;
+}
+
+.guid__card:hover .guid__divider {
+  transform: scaleX(1);
+}
+
+.guid__description {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition:
+    max-height .8s ease,
+    opacity .2s ease;
+}
+
+.guid__card:hover .guid__description {
+  max-height: 300px;
+  opacity: 1;
 }
 
 /* -------------TEAM SECTION------------- */
@@ -516,8 +568,6 @@ h4 {
 }
 
 .contact-us__form {
-  /* flex: 1; */
-  /* border: 2px solid black; */
   width: 556px;
   height: 100%;
   display: flex;
