@@ -365,7 +365,6 @@
                                 <path d="M25.6 41.08V31.36H16V25.72H25.6V16H31.48V25.72H41.08V31.36H31.48V41.08H25.6Z"
                                     fill="#191A23" />
                             </svg>
-
                         </div>
                     </div>
                 </div>
@@ -772,6 +771,31 @@
             </div>
         </footer>
     </div>
+    <script>
+        const card = document.querySelector(".guid__card");
+        const carddivider = document.querySelector(".guid__divider");
+        const button = document.querySelector(".guid__icon");
+        const carddescription = document.querySelector(".guid__description")
+        button.addEventListener("click", () => {
+            card.classList.toggle("guid__card-active");
+            carddivider.classList.toggle("guid__divider-active");
+            carddescription.classList.toggle("guid__description-active");
+
+            if (card.classList.contains("guid__card-active")) {
+                button.innerHTML = `<svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="29" cy="29" r="28.5" fill="#F3F3F3" stroke="#191A23"/>
+<path d="M20 31.64V26H37.76V31.64H20Z" fill="black"/>
+</svg> `;
+            } else {
+                button.innerHTML = `<svg width="58" height="58" viewBox="0 0 58 58" fill="none"
+                xmlns = "http://www.w3.org/2000/svg" >
+                <circle cx="29" cy="29" r="28.5" fill="#F3F3F3" stroke="#191A23" />
+               <path d="M25.6 41.08V31.36H16V25.72H25.6V16H31.48V25.72H41.08V31.36H31.48V41.08H25.6Z"
+                                    fill="#191A23" />
+                            </svg >`;
+            }
+        });
+    </script>
 </body>
 
 </html>

@@ -356,7 +356,7 @@ h4 {
   /* gap: 30px; */
 }
 
-.guid__card:hover {
+.guid__card-active {
   gap: 30px;
   background-color: var(--primary-color);
 }
@@ -403,7 +403,7 @@ h4 {
   transition: transform .3s ease;
 }
 
-.guid__card:hover .guid__divider {
+.guid__divider-active {
   transform: scaleX(1);
 }
 
@@ -416,7 +416,7 @@ h4 {
     opacity .2s ease;
 }
 
-.guid__card:hover .guid__description {
+.guid__description-active {
   max-height: 300px;
   opacity: 1;
 }
